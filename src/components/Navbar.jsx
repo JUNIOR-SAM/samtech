@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="px-[10%] flex justify-between items-center w-full">
         
         <div className="text-2xl font-black tracking-tighter text-white">
-          SAM<span className="text-gold">CREATIVITY</span>
+          SAM<span className="text-gold">TECH</span>
         </div>
 
         {/* Desktop Links */}

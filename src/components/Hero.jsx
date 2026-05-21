@@ -48,11 +48,11 @@ const Hero = () => {
         <div className="flex justify-center items-center">
           <div className="relative w-full max-w-[380px] animate-[bounce_15s_ease-in-out_infinite]">
             <div className="absolute inset-0 bg-[#007aff]/20 blur-[80px] rounded-full"></div>
-            <img 
+            {/* <img 
               src="image/about.png" 
               alt="Samuel" 
               className="relative z-10 w-full rounded-[40px] border border-white/10 grayscale-[10%] hover:grayscale-0 transition-all duration-500"
-            />
+            /> */}
           </div>
         </div>
 
