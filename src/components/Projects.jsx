@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+import marketwatchImg from '/image/marketwatch.png';
+import samflixImg from '/image/samflix.png';
+import samquizImg from '/image/samquiz.png';
+import samcartImg from '/image/samcart.png';
+import calTableImg from '/image/cal-table.png';
+import loopImg from '/image/loop.png';
+
 
 const Projects = () => {
   // 1. Your Cybersecurity projects stay at the top

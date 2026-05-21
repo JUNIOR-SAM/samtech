@@ -10,7 +10,7 @@ const About = () => {
           <div className="relative group">
             <div className="relative z-10 w-full max-w-[320px] lg:max-w-[380px]">
               <img 
-                src="/image/about.png" 
+                src=" image/about.png" 
                 alt="Samuel Oyebode" 
                 className="rounded-[40px] border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" 
               />
