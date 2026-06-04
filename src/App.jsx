@@ -20,25 +20,36 @@ function App() {
   };
 
   return (
-    <div className="relative text-white min-h-screen bg-[#0A0A0F] overflow-x-hidden">
+    <div style={{ background: '#0A0A0F', minHeight: '100vh', overflowX: 'hidden', color: 'white' }}>
+
+      {/* Preloader */}
       {isLoading && <Preloader onComplete={handleComplete} />}
-      <div
-        className="transition-opacity duration-1000"
-        style={{ opacity: fadeIn ? 1 : 0, visibility: isLoading ? 'hidden' : 'visible' }}
-      >
+
+      {/* Main content — fades in after preloader */}
+      <div style={{
+        opacity: fadeIn ? 1 : 0,
+        transition: 'opacity 1s ease',
+        // Use display:none while loading so Footer isn't trapped by visibility:hidden
+        display: isLoading ? 'none' : 'block',
+      }}>
         <ThreeBackground />
-        <div className="relative z-10 w-full">
+
+        <div style={{ position: 'relative', zIndex: 10, width: '100%' }}>
           <Navbar />
-          {/* All sections share the same centred max-width wrapper */}
+
+          {/* Centred content wrapper */}
           <div style={{ maxWidth: '1200px', margin: '0 auto', width: '90%' }}>
             <Hero />
             <About />
             <Projects />
             <Contact />
           </div>
+
+          {/* Footer is OUTSIDE the wrapper so it goes full width */}
           <Footer />
         </div>
       </div>
+
     </div>
   );
 }

@@ -132,15 +132,15 @@ const Hero = () => {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               overflow: 'hidden',
             }}>
-              {/* Replace with: <img src="/image/about.png" alt="Samuel" style={{ width:'100%', height:'100%', objectFit:'cover' }} /> */}
-              <div style={{ textAlign: 'center' }}>
+              <img src="/image/hero.png" alt="Samuel" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+              {/* <div style={{ textAlign: 'center' }}>
                 <p style={{
                   fontFamily: "'Syne', sans-serif", fontSize: '72px', fontWeight: 900,
                   background: 'linear-gradient(135deg, #00D9FF, #7C3AED)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 }}>SO</p>
                 <p style={{ color: 'rgba(255,255,255,0.15)', fontSize: '11px', letterSpacing: '4px', textTransform: 'uppercase' }}>Your photo here</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

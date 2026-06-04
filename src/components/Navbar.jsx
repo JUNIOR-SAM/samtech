@@ -53,7 +53,7 @@ const Navbar = () => {
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         }}>
           <a href="#home" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src="/image/sam.png" alt="SamTech Logo"
+            <img src="public/image/sam.png" alt="SamTech Logo"
               style={{ height: '36px', width: '36px', objectFit: 'contain', borderRadius: '8px', filter: 'drop-shadow(0 0 8px rgba(0,217,255,0.4))', transition: 'filter 0.3s ease' }}
               onMouseEnter={e => e.currentTarget.style.filter = 'drop-shadow(0 0 14px rgba(0,217,255,0.8))'}
               onMouseLeave={e => e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(0,217,255,0.4))'}

@@ -30,15 +30,15 @@ const About = () => (
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             overflow: 'hidden',
           }}>
-            {/* Replace with: <img src="/image/about.png" alt="Samuel Oyebode" style={{ width:'100%', height:'100%', objectFit:'cover' }} /> */}
-            <div style={{ textAlign: 'center' }}>
+            <img src="/image/about.png" alt="Samuel Oyebode" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+            {/* <div style={{ textAlign: 'center' }}>
               <p style={{
                 fontFamily: "'Syne', sans-serif", fontSize: '80px', fontWeight: 900,
                 background: 'linear-gradient(135deg, #00D9FF, #7C3AED)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0,
               }}>SO</p>
               <p style={{ color: 'rgba(255,255,255,0.15)', fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase' }}>Photo here</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
