@@ -1,38 +1,85 @@
-/* 1. Essential Tailwind Imports (MUST BE AT THE TOP) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 2. Global Variables & Reset */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
 :root {
-  --bg-black: #050505;
-  --accent-blue: #007aff;
-  --accent-gold: #ffcc00;
+  --bg: #0A0A0F;
+  --cyan: #00D9FF;
+  --purple: #7C3AED;
+  --gold: #ffcc00;
+  --card: #12121A;
+  --border: rgba(255, 255, 255, 0.06);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth; /* Makes clicking nav links slide smoothly */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg-black);
+  background-color: var(--bg);
   color: white;
-  font-family: 'Inter', sans-serif; /* Or whatever font you prefer */
+  font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
 }
 
-/* 3. Custom Keyframes (Optional) */
-/* Tailwind has built-in 'animate-bounce', but if you want 
-   your specific 'floating' animation, keep this: */
-@keyframes floating {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 999px; }
+
+/* Display font */
+.font-display { font-family: 'Syne', sans-serif; }
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.animate-float {
-  animation: floating 4s ease-in-out infinite;
+.text-gold-solid { color: var(--gold); }
+
+/* Glow */
+.glow-cyan { box-shadow: 0 0 40px rgba(0, 217, 255, 0.2); }
+.glow-purple { box-shadow: 0 0 40px rgba(124, 58, 237, 0.2); }
+
+/* Floating */
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+.animate-float { animation: floating 5s ease-in-out infinite; }
+
+/* Fade up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp { animation: fadeUp 0.8s ease forwards; }
+
+/* Shimmer on cards */
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+.card-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.card-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,217,255,0.05), transparent);
+  animation: shimmer 3s infinite;
 }

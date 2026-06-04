@@ -1,66 +1,114 @@
 import React from 'react';
 
-const About = () => {
-  return (
-    <section className="py-28 px-[10%] bg-[#050505]" id="about">
-      <div className="flex flex-col lg:flex-row gap-20 items-center">
-        
-        {/* Scaled Down Image Container */}
-        <div className="w-full lg:w-[40%] flex justify-center">
-          <div className="relative group">
-            <div className="relative z-10 w-full max-w-[320px] lg:max-w-[380px]">
-              <img 
-                src=" image/about.png" 
-                alt="Samuel Oyebode" 
-                className="rounded-[40px] border border-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]" 
-              />
-              {/* Experience Badge */}
-              {/* <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-brandBlue px-8 py-4 rounded-2xl shadow-xl shadow-blue-500/30 w-max text-center">
-                <p className="text-white font-black text-xl leading-tight">Final Year</p>
-                <p className="text-white/70 text-[11px] uppercase tracking-[2px] mt-1 font-bold">CS Student</p>
-              </div> */}
+const skills = [
+  { icon: '🛡️', title: 'Cybersecurity', desc: 'Vulnerability Assessment, Network Security & Ethical Hacking.', color: '#00D9FF' },
+  { icon: '🌐', title: 'Web Dev', desc: 'React, Firebase, modern full-stack applications.', color: '#7C3AED' },
+  { icon: '🎨', title: 'Design', desc: '3D Typography, Brand Identity & Studio Mockups.', color: '#ffcc00' },
+];
+
+const About = () => (
+  <section id="about" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: '1fr 1.4fr',
+      gap: '80px',
+      alignItems: 'center',
+    }}
+    className="about-grid"
+    >
+      {/* Image */}
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ position: 'relative', width: '100%', maxWidth: '340px' }}>
+          {/* Corner accents */}
+          <div style={{ position: 'absolute', top: '-8px', left: '-8px', width: '28px', height: '28px', borderTop: '2px solid #00D9FF', borderLeft: '2px solid #00D9FF', borderRadius: '4px 0 0 0', zIndex: 2 }}></div>
+          <div style={{ position: 'absolute', bottom: '-8px', right: '-8px', width: '28px', height: '28px', borderBottom: '2px solid #7C3AED', borderRight: '2px solid #7C3AED', borderRadius: '0 0 4px 0', zIndex: 2 }}></div>
+          <div style={{
+            width: '100%', aspectRatio: '1/1',
+            borderRadius: '32px',
+            border: '1px solid rgba(0,217,255,0.12)',
+            background: '#12121A',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            overflow: 'hidden',
+          }}>
+            {/* Replace with: <img src="/image/about.png" alt="Samuel Oyebode" style={{ width:'100%', height:'100%', objectFit:'cover' }} /> */}
+            <div style={{ textAlign: 'center' }}>
+              <p style={{
+                fontFamily: "'Syne', sans-serif", fontSize: '80px', fontWeight: 900,
+                background: 'linear-gradient(135deg, #00D9FF, #7C3AED)',
+                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0,
+              }}>SO</p>
+              <p style={{ color: 'rgba(255,255,255,0.15)', fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase' }}>Photo here</p>
             </div>
-            {/* Soft Glow behind image */}
-            <div className="absolute inset-0 bg-brandBlue/5 blur-[80px] rounded-full z-0"></div>
           </div>
         </div>
-
-        {/* Expanded Content Section (takes 60% of width) */}
-        <div className="w-full lg:w-[60%] space-y-8 text-center lg:text-left">
-          <div>
-            <h4 className="text-brandBlue font-bold tracking-[5px] text-xs uppercase mb-4">Discovery</h4>
-            <h2 className="text-5xl lg:text-6xl font-black text-white leading-tight">
-              About <span className="text-gold">Me</span>
-            </h2>
-          </div>
-
-          <p className="text-white/60 text-lg lg:text-xl leading-relaxed">
-            Hi, I'm <span className="text-white font-bold">Samuel Oyebode</span>. I live at the intersection of technical precision and creative freedom. As a final-year Computer Science student, I've mastered the art of securing networks while simultaneously crafting high-end visual identities.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-            <div className="bg-[#111111] border border-white/5 p-8 rounded-3xl hover:border-brandBlue/40 transition-all text-left">
-              <span className="text-3xl mb-4 block">🛡️</span>
-              <h5 className="text-gold font-bold text-xl mb-3">Cybersecurity</h5>
-              <p className="text-white/50 text-sm leading-relaxed">Focusing on Vulnerability Assessment, Network Security, and Ethical Hacking.</p>
-            </div>
-            <div className="bg-[#111111] border border-white/5 p-8 rounded-3xl hover:border-brandBlue/40 transition-all text-left">
-              <span className="text-3xl mb-4 block">🎨</span>
-              <h5 className="text-gold font-bold text-xl mb-3">Creative Design</h5>
-              <p className="text-white/50 text-sm leading-relaxed">Specializing in 3D Typography, Brand Identity, and Studio Mockups.</p>
-            </div>
-          </div>
-
-          <div className="pt-6">
-            <p className="text-white/40 italic border-l-4 border-brandBlue pl-6 text-lg py-2">
-              "Blending the precision of code with the freedom of design to create secure digital excellence."
-            </p>
-          </div>
-        </div>
-
       </div>
-    </section>
-  );
-};
+
+      {/* Content */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+        <div>
+          <p style={{ color: '#00D9FF', fontSize: '11px', fontWeight: 700, letterSpacing: '5px', textTransform: 'uppercase', marginBottom: '12px' }}>
+            Discovery
+          </p>
+          <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, color: 'white', lineHeight: 1.1, margin: 0 }}>
+            About <span style={{ color: '#ffcc00' }}>Me</span>
+          </h2>
+        </div>
+
+        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '16px', lineHeight: 1.85, margin: 0 }}>
+          Hi, I'm <strong style={{ color: 'white' }}>Samuel Oyebode</strong>. I live at the intersection of technical precision and creative freedom. As a final-year Computer Science student, I've mastered the art of securing networks while simultaneously crafting high-end visual identities.
+        </p>
+
+        {/* Skill cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '14px' }} className="skill-grid">
+          {skills.map((s) => (
+            <div
+              key={s.title}
+              style={{
+                padding: '20px 16px',
+                borderRadius: '20px',
+                background: '#0E0E18',
+                border: '1px solid rgba(255,255,255,0.06)',
+                transition: 'all 0.3s ease',
+                cursor: 'default',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = s.color + '40';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <span style={{ fontSize: '24px', display: 'block', marginBottom: '10px' }}>{s.icon}</span>
+              <h5 style={{ color: s.color, fontWeight: 700, fontSize: '14px', fontFamily: "'Syne', sans-serif", marginBottom: '6px' }}>{s.title}</h5>
+              <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '12px', lineHeight: 1.6, margin: 0 }}>{s.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Quote */}
+        <blockquote style={{
+          borderLeft: '3px solid #00D9FF',
+          paddingLeft: '20px',
+          color: 'rgba(255,255,255,0.35)',
+          fontStyle: 'italic',
+          fontSize: '15px',
+          lineHeight: 1.7,
+          margin: 0,
+        }}>
+          "Blending the precision of code with the freedom of design to create secure digital excellence."
+        </blockquote>
+      </div>
+    </div>
+
+    <style>{`
+      @media (max-width: 768px) {
+        .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+        .skill-grid { grid-template-columns: 1fr !important; }
+      }
+    `}</style>
+  </section>
+);
 
 export default About;

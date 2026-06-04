@@ -5,22 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio-2.0</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      @theme {
+        --color-brandBlue: #007aff;
+        --color-gold: #ffcc00;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brandBlue: '#007aff',
-          gold: '#ffcc00',
-        }
-      }
-    }
-  }
-</script>
   </body>
 </html>
