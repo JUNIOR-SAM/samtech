@@ -132,7 +132,7 @@ const Hero = () => {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               overflow: 'hidden',
             }}>
-              <img src="/image/hero.png" alt="Samuel" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+              <img src="public/image/hero.png" alt="Samuel" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
               {/* <div style={{ textAlign: 'center' }}>
                 <p style={{
                   fontFamily: "'Syne', sans-serif", fontSize: '72px', fontWeight: 900,

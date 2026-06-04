@@ -30,7 +30,7 @@ const About = () => (
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             overflow: 'hidden',
           }}>
-            <img src="/image/about.png" alt="Samuel Oyebode" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+            <img src="public/image/about.png" alt="Samuel Oyebode" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
             {/* <div style={{ textAlign: 'center' }}>
               <p style={{
                 fontFamily: "'Syne', sans-serif", fontSize: '80px', fontWeight: 900,
